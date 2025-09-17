@@ -24,6 +24,11 @@ body {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--green-dark);
+    color: var(--text-light);
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -577,6 +582,14 @@ footer a:hover {
         overflow: hidden;
         display: flex;
         flex-direction: column;
+    }
+
+    nav ul {
+        padding-bottom: 1rem;
+    }
+
+    nav ul .nav-link {
+        font-size: 13px;
     }
 
     input,
