@@ -575,6 +575,7 @@ footer a:hover {
         font-size: 1.4rem;
     }
 
+
     .services,
     .projects,
     .why-choose {
@@ -595,6 +596,28 @@ footer a:hover {
 
     nav ul .nav-link {
         font-size: 12px;
+    }
+
+
+    .dashboard-item {
+        width: 65px;
+    }
+
+    .section.about {
+        padding-bottom: 0px !important;
+    }
+
+    .about-container {
+        gap: 10px;
+    }
+
+    .about-text p {
+        padding-bottom: 0px !important;
+    }
+
+    .about-title {
+        margin-top: 0px;
+        font-size: 2rem;
     }
 
     input,
