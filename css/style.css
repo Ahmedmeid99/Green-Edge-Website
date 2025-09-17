@@ -1,4 +1,5 @@
 :root {
+    --main-color: #04426f;
     --green-dark: #228B22;
     --green-light: #C8E6C9;
     --text-dark: #222;
@@ -73,7 +74,8 @@ strong {
 
 .navbar {
     background: var(--green-dark);
-    padding: 15px 40px;
+    /* background: var(--main-color); */
+    padding: 0px 40px;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -83,6 +85,11 @@ strong {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    height: 4.5rem;
+}
+
+.logo img {
+    height: 100%;
 }
 
 nav ul {
@@ -102,6 +109,7 @@ nav ul {
 
 .nav-link.active {
     /* color: #228B22; */
+    padding-bottom: 1rem;
     font-weight: bold;
     border-bottom: 2px solid var(--green-light);
 }
@@ -362,7 +370,7 @@ nav ul li .nav-link:hover {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-.project-card h3 {
+.project-card a {
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: #176617;
@@ -442,6 +450,10 @@ nav ul li .nav-link:hover {
 
 /* ---------------- */
 /* Form Section */
+#contact .section-title {
+    margin: 0px !important;
+}
+
 form {
     display: flex;
     flex-direction: column;
