@@ -234,11 +234,40 @@ nav ul li .nav-link:hover {
     text-align: center;
     color: var(--green-dark);
     font-size: 2rem;
+    margin: auto;
     margin-bottom: 60px;
     font-weight: bold;
     line-height: 1.1;
     letter-spacing: -0.5px;
+    position: relative;
+    width: fit-content;
 }
+
+.section-title::before {
+    content: '';
+    /* background-color: var(--main-color); */
+    background: linear-gradient(135deg, var(--main-color), var(--green-light));
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    width: .3rem;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.section-title::after {
+    content: '';
+    /* background-color: var(--main-color); */
+    background: linear-gradient(135deg, var(--main-color), var(--green-light));
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+    width: .3rem;
+    height: 50%;
+    border-radius: 50px;
+}
+
+
 
 /* ---------------- */
 /* About Section */
@@ -273,6 +302,7 @@ nav ul li .nav-link:hover {
     font-size: 1.1rem;
     line-height: 1.7;
     color: #444;
+    padding-bottom: 3rem;
 }
 
 .about-image {
@@ -289,7 +319,7 @@ nav ul li .nav-link:hover {
 }
 
 .about-image img:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 
 
@@ -478,7 +508,7 @@ nav ul li .nav-link:hover {
 /* ---------------- */
 /* Form Section */
 #contact .section-title {
-    margin: 0px !important;
+    margin: 0px auto !important;
 }
 
 form {
