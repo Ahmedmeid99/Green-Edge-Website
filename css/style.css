@@ -571,6 +571,9 @@ footer a:hover {
 }
 
 @media (max-width:600px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
 
     .services,
     .projects,
