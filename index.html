@@ -137,23 +137,51 @@
     <!-- Projects -->
     <section class="section" id="projects">
         <h2 class="section-title">Our Projects at a Glance</h2>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select id="statusFilter">
+                <option value="all">All Status</option>
+                <option value="active">Active</option>
+                <option value="completed">Completed</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+
+            <select id="sectorFilter">
+                <option value="all">All Sectors</option>
+                <option value="infrastructure">Infrastructure</option>
+                <option value="energy">Energy</option>
+                <option value="consultancy">Consultancy</option>
+            </select>
+
+            <select id="regionFilter">
+                <option value="all">All Regions</option>
+                <option value="egypt">Egypt</option>
+                <option value="north-africa">North Africa</option>
+            </select>
+        </div>
+
+        <!-- Project Cards -->
         <div class="projects">
-            <div class="project-card">
+            <div class="project-card" data-status="completed" data-sector="infrastructure" data-region="egypt">
                 <a href="./pages/projects.html"><i class="fa-solid fa-city"></i> New Cairo Infrastructure
                     Development</a>
                 <p><i class="fa-solid fa-circle-check"></i> 80% Complete – Deadline: Q2 2026</p>
             </div>
-            <div class="project-card">
+
+            <div class="project-card" data-status="upcoming" data-sector="infrastructure" data-region="egypt">
                 <a href="./pages/projects.html"><i class="fa-solid fa-train-subway"></i> Alexandria Metro Expansion</a>
                 <p><i class="fa-solid fa-clipboard-list"></i> In Planning – JV with global engineering partner</p>
             </div>
-            <div class="project-card">
+
+            <div class="project-card" data-status="active" data-sector="energy" data-region="north-africa">
                 <a href="./pages/projects.html"><i class="fa-solid fa-solar-panel"></i> North Africa Renewable Energy
                     Hub</a>
                 <p><i class="fa-solid fa-leaf"></i> Ongoing – Sustainability Flagship</p>
             </div>
         </div>
     </section>
+
 
 
     <!-- Why Choose -->
