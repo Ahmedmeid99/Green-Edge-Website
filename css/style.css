@@ -6,13 +6,27 @@
     --container-width: 80%;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
     color: var(--text-dark);
+    background-color: #fafafa;
     line-height: 1.6;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 strong {
@@ -30,13 +44,13 @@ strong {
     right: -50px;
     width: 40px;
     height: 40px;
-    background: var(--main-color);
-    color: #fff;
+    background: var(--green-light);
+    color: var(--green-dark);
     opacity: 0.5;
     border-radius: 10px;
     z-index: 80;
     cursor: pointer;
-    transition: 2s;
+    transition: 1s;
 }
 
 .scroll-btn:hover {
@@ -54,17 +68,12 @@ strong {
     top: 0;
     z-index: 1000;
     max-width: 1140px;
-    padding-top: .2rem;
-    margin: 0 auto .2rem auto;
+    margin: auto;
 }
 
 .navbar {
     background: var(--green-dark);
-    /* border-radius: 25px; */
-    border-end-end-radius: 15px;
-    border-bottom-left-radius: 15px;
     padding: 15px 40px;
-    opacity: .8;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -84,14 +93,21 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+.nav-link {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+.nav-link.active {
+    /* color: #228B22; */
+    font-weight: bold;
+    border-bottom: 2px solid var(--green-light);
+}
+
+
+nav ul li .nav-link:hover {
     color: #C8E6C9;
 }
 
@@ -108,11 +124,14 @@ nav ul li a:hover {
 /* Hero Section */
 
 .hero {
-    background: linear-gradient(135deg, #228B22, #C8E6C9);
+    /* background: linear-gradient(135deg, #228B22, #C8E6C9); */
+    background-color: var(--green-dark);
     color: #fff;
     text-align: center;
     padding: 80px 20px;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
 }
 
 .hero h1 {
@@ -146,13 +165,16 @@ nav ul li a:hover {
 }
 
 .hero-buttons .btn {
-    background: #176617;
+    background: var(--green-dark);
+    /*#176617*/
     color: #fff;
+    border: 1px solid var(--green-light);
 }
 
 .hero-buttons .btn.secondary {
     background: #fff;
-    color: #176617;
+    color: var(--green-dark);
+    /*#176617*/
 }
 
 .hero-buttons .btn:hover {
@@ -434,7 +456,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 1rem;
-    width: 100%;
+    /* width: 100%; */
 }
 
 button {
@@ -455,7 +477,6 @@ button:hover {
 /* Footer Section */
 footer {
     background: var(--green-dark);
-    opacity: .7;
     color: white;
     text-align: center;
     padding: 30px 20px;
@@ -472,4 +493,25 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width:600px) {
+
+    .services,
+    .projects,
+    .why-choose {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .navbar {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    textarea {
+        width: auto;
+    }
 }
