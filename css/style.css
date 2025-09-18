@@ -153,7 +153,7 @@ strong {
     /* background: var(--green-dark); */
     background: linear-gradient(135deg, var(--green-dark), var(--main-color));
 
-    padding: 0px 40px;
+    padding: 0px 40px 0 20px;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -188,6 +188,7 @@ nav ul {
 .nav-link.active {
     padding-bottom: 1rem;
     font-weight: bold;
+    color: var(--green-light);
     border-bottom: 2px solid var(--green-light);
 }
 
@@ -367,14 +368,16 @@ nav ul li .nav-link:hover {
 }
 
 .services .service-card h3 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #228B22;
+    /* font-weight: 400; */
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
     width: 100%;
+
+    font-size: 1.2rem;
+    color: #176617;
+
     /* 
     white-space: nowrap;
     overflow: hidden;
