@@ -95,10 +95,6 @@ const heroImages = [
     // "images/hero5.jpg"
 
 ];
-heroImages.forEach(src => {
-    const img = new Image();
-    img.src = src;
-});
 
 let current = 0;
 const heroSection = document.getElementById("hero-bg");
