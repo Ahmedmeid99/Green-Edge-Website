@@ -82,3 +82,33 @@ function filterProjects() {
 statusFilter.addEventListener("change", filterProjects);
 sectorFilter.addEventListener("change", filterProjects);
 regionFilter.addEventListener("change", filterProjects);
+
+
+
+// ----------------------------------------
+
+const heroImages = [
+    "images/hero1.jpg",
+    "images/hero2.jpg",
+    "images/hero3.jpg",
+    // "images/hero4.jpg",
+    // "images/hero5.jpg"
+
+];
+
+let current = 0;
+const heroSection = document.getElementById("hero-bg");
+
+// دالة لتغيير الصورة
+function changeHeroImage() {
+    heroSection.style.backgroundImage = `url('${heroImages[current]}')`;
+
+    // heroSection.style.backgroundImage = `url('${heroImages[current]}')`;
+    current = (current + 1) % heroImages.length;
+}
+
+// أول تحميل
+changeHeroImage();
+
+// تغيير كل 5 ثوانٍ
+setInterval(changeHeroImage, 5000);
