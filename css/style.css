@@ -18,6 +18,7 @@ body {
     box-sizing: border-box;
     /* font-family: "Lato", sans-serif; */
     font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
 
     color: var(--text-dark);
     background-color: #fafafa;
@@ -500,12 +501,6 @@ nav ul li .nav-link:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
-
-
-.about-image img:hover {
-    /* transform: scale(1.05); */
-}
-
 
 /* ---------------- */
 /* Services Section */
