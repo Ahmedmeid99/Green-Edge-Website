@@ -317,7 +317,7 @@ nav ul li .nav-link:hover {
 /* Hero Section */
 
 .hero {
-    background: linear-gradient(135deg, var(--green-dark), var(--main-color));
+    background: linear-gradient(135deg, var(--green-dark), var(--main-color)), url(../images//hero1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
