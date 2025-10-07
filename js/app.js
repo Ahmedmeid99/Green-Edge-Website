@@ -2,12 +2,14 @@ const PUBLIC_KEY = "ThijL73HGDMaw4i7L"; // EmailJS Public Key
 const SERVICE = "service_hyf2ufd"; // EmailJS Service ID
 const TEMPLATE = "template_1usngjq"; // EmailJS Template ID
 
-// Initialize EmailJS
+//----------------------------------------
+// EmailJS functionality
+//----------------------------------------
 
-// auto call function 
+// Initialize EmailJS
 (function () {
     emailjs.init(PUBLIC_KEY);
-})();
+})();// auto call function
 
 const contactForm = document.getElementById("contact-form")
 if (contactForm) {
@@ -23,8 +25,9 @@ if (contactForm) {
     });
 }
 
-//------------------------------------------------
-// show scrollBtn 
+//----------------------------------------
+// scrollBtn functionality
+//----------------------------------------
 const scrollBtn = document.querySelector('.scroll-btn')
 if (scrollBtn) {
 
@@ -48,8 +51,9 @@ if (scrollBtn) {
     })
 }
 
-
-// -------------------------------------------
+//----------------------------------------
+// Project Filtering functionality
+//----------------------------------------
 const statusFilter = document.getElementById("statusFilter");
 const sectorFilter = document.getElementById("sectorFilter");
 const regionFilter = document.getElementById("regionFilter");
@@ -65,7 +69,6 @@ function filterProjects() {
         const sector = card.dataset.sector;
         const region = card.dataset.region;
 
-        // تحقق إذا المشروع ينطبق عليه الفلاتر
         if (
             (statusValue === "all" || status === statusValue) &&
             (sectorValue === "all" || sector === sectorValue) &&
@@ -84,39 +87,52 @@ sectorFilter.addEventListener("change", filterProjects);
 regionFilter.addEventListener("change", filterProjects);
 
 
-
-// ----------------------------------------
-
+//----------------------------------------
+// Hero Section functionality
+//----------------------------------------
 const heroImages = [
     "images/hero1.jpg",
     "images/hero2.jpg",
     "images/hero3.jpg",
-    // "images/hero4.jpg",
-    // "images/hero5.jpg"
-
 ];
-
-// Preload images
-heroImages.forEach(src => {
-    const img = new Image();
-    img.src = src;
-});
 
 let current = 0;
 const heroSection = document.getElementById("hero-bg");
 
+// 🧠 Preload and cache images
+const loadedImages = heroImages.map(src => {
+    const img = new Image();
+    img.src = src; // browser caches automatically
+    return img;
+});
+
 function changeHeroImage() {
-    heroSection.style.backgroundImage =
-        " url('" +
-        heroImages[current] +
-        "')";
+    heroSection.style.backgroundImage = `
+    url('${loadedImages[current].src}')
+  `;
     heroSection.style.backgroundSize = "cover";
     heroSection.style.backgroundPosition = "center";
     heroSection.style.backgroundRepeat = "no-repeat";
-    current = (current + 1) % heroImages.length;
+
+    current = (current + 1) % loadedImages.length;
 }
-// أول تحميل
+
+// First image immediately
 changeHeroImage();
 
-// تغيير كل 5 ثوانٍ
+// Then change every 5 seconds
 setInterval(changeHeroImage, 5000);
+
+// ---------------------------------------
+// Loader functionality
+//----------------------------------------
+// Select the loader element
+const loader = document.getElementById("loader");
+
+// Keep loader visible for a few seconds, then hide it smoothly
+window.addEventListener("load", () => {
+    // Wait 2 seconds (you can change this duration)
+    setTimeout(() => {
+        loader.classList.add("hidden");
+    }, 3000);
+});
