@@ -317,18 +317,16 @@ nav ul li .nav-link:hover {
 /* Hero Section */
 
 .hero {
-    /* background: linear-gradient(135deg, var(--green-dark), var(--main-color)); */
-    /* background-position: center;
+    background: linear-gradient(135deg, var(--green-dark), var(--main-color));
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     color: #fff;
     text-align: center;
     padding: 80px 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     position: relative;
-    transition: background-image 1s ease-in-out;
-
 }
 
 .hero-bg {
@@ -880,6 +878,10 @@ footer .copy-right {
 
     .hero {
         padding: 40px 20px;
+    }
+
+    .hero-bg {
+        transition: background-image 1.5s ease-in-out;
     }
 
     .hero-buttons {
