@@ -96,17 +96,25 @@ const heroImages = [
 
 ];
 
+// Preload images
+heroImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 let current = 0;
 const heroSection = document.getElementById("hero-bg");
 
-// دالة لتغيير الصورة
 function changeHeroImage() {
-    heroSection.style.backgroundImage = `url('${heroImages[current]}')`;
-
-    // heroSection.style.backgroundImage = `url('${heroImages[current]}')`;
+    heroSection.style.backgroundImage =
+        " url('" +
+        heroImages[current] +
+        "')";
+    heroSection.style.backgroundSize = "cover";
+    heroSection.style.backgroundPosition = "center";
+    heroSection.style.backgroundRepeat = "no-repeat";
     current = (current + 1) % heroImages.length;
 }
-
 // أول تحميل
 changeHeroImage();
 
