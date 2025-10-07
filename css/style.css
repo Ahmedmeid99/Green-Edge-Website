@@ -317,10 +317,10 @@ nav ul li .nav-link:hover {
 /* Hero Section */
 
 .hero {
-    background: linear-gradient(135deg, var(--green-dark), var(--main-color));
-    background-position: center;
+    /* background: linear-gradient(135deg, var(--green-dark), var(--main-color)); */
+    /* background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     color: #fff;
     text-align: center;
     padding: 80px 20px;
@@ -339,7 +339,6 @@ nav ul li .nav-link:hover {
     height: 100%;
     transition: background-image 1s ease-in-out;
     z-index: 0;
-
 }
 
 .hero-content {
