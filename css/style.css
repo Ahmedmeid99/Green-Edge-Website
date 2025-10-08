@@ -984,6 +984,10 @@ body.dark-mode p {
     color: #ccc;
 }
 
+body.dark-mode #contact p {
+    color: var(--text-dark);
+}
+
 body.dark-mode .header,
 body.dark-mode .footer {
     background-color: var(--dark-bg-1);
