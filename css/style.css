@@ -386,6 +386,41 @@ nav ul li .nav-link:hover {
     z-index: 0;
 }
 
+/* hero background container */
+#hero-bg {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    /* keep whatever height you already use */
+    z-index: 0;
+}
+
+/* gradient overlay on top of the background image */
+#hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    transition: background 250ms ease, opacity 250ms ease;
+}
+
+/* make sure hero content sits above overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* dark-mode stronger overlay */
+body.dark-mode #hero-bg::before {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -399,14 +434,16 @@ nav ul li .nav-link:hover {
     text-shadow: 1px 1px 1px #333;
 }
 
-.hero p {
+.hero h5 {
     font-size: 1.1rem;
     margin-bottom: 30px;
+    color: #fff;
+    font-weight: 100;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-    text-shadow: 1px 1px 1px #535353;
+    text-shadow: 1px 1px 1px #333;
 
 }
 
