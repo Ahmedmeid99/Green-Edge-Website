@@ -118,3 +118,30 @@ const yearElement = document.getElementById("current-year");
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+//----------------------------------------
+// Dark Mode Toggle
+//----------------------------------------
+const themeToggle = document.getElementById("theme-toggle");
+if (themeToggle) {
+    // Load saved mode
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Save preference
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+
+        // Optional: switch icon
+        const icon = themeToggle.querySelector("i");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+    });
+}

@@ -4,6 +4,10 @@
     --green-light: #C8E6C9;
     --text-dark: #222;
     --text-light: #fff;
+    --dark-bg-1: #1f1f1f;
+    --dark-bg-2: #111111;
+    --dark-bg-3: #1a1a1a;
+
     --container-width: 80%;
 }
 
@@ -573,7 +577,7 @@ nav ul li .nav-link:hover {
 }
 
 .services .service-card a {
-    color: #176617;
+    color: inherit
 }
 
 .services .service-card p {
@@ -964,4 +968,94 @@ footer .copy-right {
     .pl-2 {
         padding-left: 1rem;
     }
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+    background-color: var(--dark-bg-1);
+    color: #f0f0f0;
+}
+
+body.dark-mode .loader {
+    background-color: var(--dark-bg-1);
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+body.dark-mode .header,
+body.dark-mode .footer {
+    background-color: var(--dark-bg-1);
+}
+
+body.dark-mode a {
+    /* color: #80d4ff; */
+}
+
+body.dark-mode .section {
+    background-color: var(--dark-bg-3);
+}
+
+body.dark-mode .service-card,
+body.dark-mode .project-card,
+body.dark-mode .why-choose .card {
+    background-color: var(--dark-bg-2);
+    color: var(--text-light);
+    /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); */
+}
+
+body.dark-mode .service-card h3,
+body.dark-mode .project-card h3,
+body.dark-mode .why-choose .card h3 {
+    color: var(--green-dark);
+}
+
+body.dark-mode .service-card p,
+body.dark-mode .project-card p,
+body.dark-mode .why-choose .card p {
+    /* background-color: var(--dark-bg-2); */
+    color: #eee;
+}
+
+body.dark-mode .breadcrumb-container {
+    background: var(--dark-bg-3);
+}
+
+body.dark-mode .service-details .service-intro {
+    background-color: var(--dark-bg-2);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: var(--dark-bg-1);
+    color: #eee;
+    border: 1px solid #555;
+}
+
+body.dark-mode .hero .btn.secondary {
+    background: var(--dark-bg-1);
+    border-color: var(--dark-bg-2);
+}
+
+body.dark-mode .hero-dashboard .dashboard-item {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid;
+    transition: color 0.3s;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark-mode .theme-toggle {
+    color: #f0f0f0;
 }
