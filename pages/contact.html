@@ -28,6 +28,14 @@
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-image">
+            <img src="../images/logo.png" alt="Loading...">
+        </div>
+    </div>
+
+    <!-- Scroll Button -->
     <div class="scroll-btn center">
         <i class="fa-solid fa-arrow-up "></i>
     </div>
@@ -44,7 +52,7 @@
                     <li><a href="../index.html" class="nav-link">Home</a></li>
                     <li><a href="./about.html" class="nav-link">About Us</a></li>
                     <li><a href="./services.html" class="nav-link">Services</a></li>
-                    <li><a href="./projects.html" class="nav-link">Projects</a></li>
+                    <!-- <li><a href="./projects.html" class="nav-link">Projects</a></li> -->
                     <li><a href="./contact.html" class="nav-link active">Contact</a></li>
                 </ul>
             </nav>
@@ -157,11 +165,13 @@
             <p>
                 <a href="./about.html">About Us</a> |
                 <a href="./services.html">Services</a> |
-                <a href="./projects.html">Projects</a> |
+                <!-- <a href="./projects.html">Projects</a> | -->
                 <a href="#contact">Contact</a>
             </p>
             <p>Green Edge – Driving Sustainable Growth Through Project Management.</p>
-            <span class="copy-right">Copyright © 2025 Green Edge All rights reserved.</span>
+            <span class="copy-right">
+                Copyright © <span id="current-year"></span> Green Edge All rights reserved.
+            </span>
         </footer>
     </div>
     <!-- bootstrap  -->
